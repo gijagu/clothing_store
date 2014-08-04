@@ -1,0 +1,68 @@
+
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+
+/*
+define colors:
+
+primary: #428bca;
+success: #5cb85c;
+info:    #5bc0de;
+warning: #f0ad4e;
+danger:  #d9534f;
+
+*/
+
+body{
+	font-size: 13px;
+	font-family: 'Open Sans', arial, tahoma, sans-serif;
+	background:url(../img/bg.png) repeat 0 0 fixed;
+}
+
+.gs-primary {
+	background: #fff;
+	border-radius: 5px;
+	box-shadow: 0 0 4px #999;
+	padding: 15px;
+}
+
+
+
+.icon-danger .fa-circle,
+.danger .fa-exclamation-circle {
+	color: #d9534f;
+}
+
+.success .fa-check-circle {
+	color: #5cb85c;
+}
+
+.warning .fa-info-circle{
+	color: #F0AD4E;
+}
+
+.form-text-small .form-control {
+	width: 60px;
+	display: inline-block;
+}
+
+.gs-navigation {
+	margin-bottom: 2em;
+}
+
+.wrap-img {
+	width: 200px;
+}
+
+.nav-tabs.nav-justified > li > a {
+	font-size: 16px;
+}
+
+.nav-tabs.nav-justified > li > a:hover {
+	background: #2eabd5;
+	color: #fff;
+}
+
+
