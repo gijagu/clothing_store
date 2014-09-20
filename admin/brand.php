@@ -38,7 +38,7 @@
                       <div class="block-group col-sm-6">
                         <div class="form-group">
                           <label for="nameProd">Nombre</label>
-                          <input type="text" class="form-control" name="nombre" id="nameProd" placeholder="Nombre del producto" data-parsley-required>
+                          <input type="text" class="form-control" name="name" id="nameProd" placeholder="Nombre del producto" data-parsley-required>
                         </div>
                         
                         <div class="form-group">
@@ -89,14 +89,14 @@
           ?>
             <tr>
               <form action="updateproduct.php?id=<?= $fila['id'];?>" method="POST">
-                <td><?= $fila["nombre"]; ?></td>
+                <td><?= $fila["name"]; ?></td>
                 <td><?= $fila["descripcion"]; ?></td>
                 <td><?= $fila["imagen"]; ?></td>
                 <td>
-                  <a href="editproduct.php?id=<?= $fila['id'];?>" class="btn btn-default btn-lg btn-info"><span class="glyphicon glyphicon-wrench"></span></a>                  
+                  <a href="editbrand.php?id=<?= $fila['id'];?>" class="btn btn-default btn-lg btn-info"><span class="glyphicon glyphicon-wrench"></span></a>                  
                 </td>
                 <td>
-                  <a href="removeproduct.php?id=<?= $fila['id'];?>" class="btn btn-default btn-lg btn-danger"><span class="glyphicon glyphicon-remove"></span></a>
+                  <a href="removebrand.php?id=<?= $fila['id'];?>" class="btn btn-default btn-lg btn-danger"><span class="glyphicon glyphicon-remove"></span></a>
                 </td>
             </form>
             </tr>

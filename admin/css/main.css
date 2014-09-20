@@ -65,4 +65,10 @@ body{
 	color: #fff;
 }
 
+.panel-footer .btn {
+	margin: 0 5px;
+}
 
+.form-brand {
+	padding-left: 0;
+}

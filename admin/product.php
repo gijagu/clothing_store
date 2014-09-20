@@ -51,22 +51,64 @@
                       </div>
                       
                       <div class="form-group">
+                        <label for="colourProd">Colores</label>
+                        <input type="text" class="form-control" id="colourProd" name="colour" placeholder="Ingrese un color" data-parsley-required>
+                        <p class="help-block">Puede agregar 1 o mas colores y separarlos por comas(,).</p>
+
+                      </div>
+
+                      <div class="form-group">
                         <label for="descProd">Descripci&oacute;n</label>
                         <textarea class="form-control" id="descProd" rows="3" name="descripcion" data-parsley-required></textarea>
                       </div>
                     </div>
 
                     <div class="block-group col-sm-6">
+                        <?php 
+                          $peticion2 = "SELECT * FROM brand";
+                          $resultado2 = mysqli_query($conexion, $peticion2);
+                           
+                        ?>
 
+                      <div class="form-group">
+                        <label for="brandProd">Marca</label>
+                        <select class="form-control" id="brandProd" name="id_brand" data-parsley-required>
+                          <option value="" selected="selected">Elije una Marca</option>
+                          <?php while($fila2 = mysqli_fetch_array($resultado2)) {?>
+                          <option value="<?= $fila2['id']; ?>"><?= $fila2["name"]; ?> </option>
+                          <?php } ?>
+                        </select>
+                      </div>
+                      
+                    <div class="form-group">
+                      <label for="descProd">Tallas</label>
+                      <div class="clearfix">
+                        
+                        <div class="wrap-check">                            
+                          <label class="checkbox-inline">
+                            <input type="checkbox" id="size-small" data-parsley-errors-container="#box-size" data-parsley-required name="size[]" value="small" > Small
+                          </label>
+                          <label class="checkbox-inline">
+                            <input type="checkbox" id="size-medium" name="size[]" value="medium"> Medium
+                          </label>
+                          <label class="checkbox-inline">
+                            <input type="checkbox" id="size-large" name="size[]" value="large"> Large
+                          </label>
+                          <div id="box-size"></div>
+                        </div>
+                      </div>
+                    </div>
 
                       <div class="form-group">
                         <div><label>Activado</label></div>
                         <label class="radio-inline">
-                          <input type="radio" id="statetrue" name="activado" value="1" data-parsley-required> Si
+                          <input type="radio" id="statetrue" data-parsley-errors-container="#box-status" name="activado" value="1" data-parsley-required> Si
                         </label>
                         <label class="radio-inline">
                           <input type="radio" id="statefalse" name="activado" value="0"> No
                         </label>
+                        <div id="box-status"></div>
+
                       </div>      
 
                       <div class="form-group">

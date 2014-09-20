@@ -2,27 +2,23 @@
 include "php/config.php";
 include "php/header.php";
 ?>
-		<div id="wrapper" class="container">
 			<section  class="homepage-slider" id="home-slider">
 				<div class="flexslider">
 					<ul class="slides">
 						<li>
-							<img src="images/carousel/banner-1.jpg" alt="" />
+							<img src="images/carousel/banner1.jpg" alt="" />
 						</li>
 						<li>
-							<img src="images/carousel/banner-2.jpg" alt="" />
-							<div class="intro">
-								<h1>Mid season sale</h1>
-								<p><span>Up to 50% Off</span></p>
-								<p><span>On selected items online and in stores</span></p>
-							</div>
+							<img src="images/carousel/banner2.png" alt="" />
+						</li>
+						<li>
+							<img src="images/carousel/banner3.png" alt="" />
 						</li>
 					</ul>
 				</div>			
 			</section>
 			<section class="header_text">
-				We stand for top quality templates. Our genuine developers always optimized bootstrap commercial templates. 
-				<br/>Don't miss to use our cheap abd best bootstrap templates.
+				SOMOS LA CHICA MALA DE LAS DEMÁS MARCAS, SOMOS ÚNICAS, ESPECIALES, EGOÍSTAS CON NUESTRO ESTILO, <br>ATRÉVETE A SER UNA CHICA MALA!.
 			</section>
 			<section class="main-content">
 				<div class="row">
@@ -59,7 +55,6 @@ include "php/header.php";
 											?>
 												<li class="span3">
 													<div class="product-box">
-														<span class="sale_tag"></span>
 											<?php
 
 												$peticion2  = "SELECT * FROM imagesproducts WHERE idproduct = ".$fila['id']." LIMIT 1";
@@ -131,7 +126,7 @@ include "php/header.php";
 											?>
 												<li class="span3">
 													<div class="product-box">
-														<span class="sale_tag"></span>
+														<span class="sale_tag">NUEVO</span>
 											<?php
 
 												$peticion2  = "SELECT * FROM imagesproducts WHERE idproduct = ".$fila['id']." LIMIT 1";
@@ -175,7 +170,7 @@ include "php/header.php";
 								<div class="service">
 									<div class="responsive">	
 										<img src="images/feature_img_2.png" alt="" />
-										<h4>MODERN <strong>DESIGN</strong></h4>
+										<h4>MODERNOS <strong>DISE&Ntilde;OS</strong></h4>
 										<p>Lorem Ipsum is simply dummy text of the printing and printing industry unknown printer.</p>									
 									</div>
 								</div>
@@ -184,7 +179,7 @@ include "php/header.php";
 								<div class="service">
 									<div class="customize">			
 										<img src="images/feature_img_1.png" alt="" />
-										<h4>FREE <strong>SHIPPING</strong></h4>
+										<h4>ENVIOS A TODO EL <strong>PERÚ</strong></h4>
 										<p>Lorem Ipsum is simply dummy text of the printing and printing industry unknown printer.</p>
 									</div>
 								</div>
@@ -193,7 +188,7 @@ include "php/header.php";
 								<div class="service">
 									<div class="support">	
 										<img src="images/feature_img_3.png" alt="" />
-										<h4>24/7 LIVE <strong>SUPPORT</strong></h4>
+										<h4>VENTAS X <strong>MAYOR</strong></h4>
 										<p>Lorem Ipsum is simply dummy text of the printing and printing industry unknown printer.</p>
 									</div>
 								</div>
@@ -225,44 +220,7 @@ include "php/header.php";
 					</div>
 				</div>
 			</section>
-			<section id="footer-bar">
-				<div class="row">
-					<div class="span3">
-						<h4>Navigation</h4>
-						<ul class="nav">
-							<li><a href="index.html">Homepage</a></li>  
-							<li><a href="about.html">About Us</a></li>
-							<li><a href="contact.html">Contac Us</a></li>
-							<li><a href="cart.html">Your Cart</a></li>
-							<li><a href="register.html">Login</a></li>							
-						</ul>					
-					</div>
-					<div class="span4">
-						<h4>My Account</h4>
-						<ul class="nav">
-							<li><a href="#">My Account</a></li>
-							<li><a href="#">Order History</a></li>
-							<li><a href="#">Wish List</a></li>
-							<li><a href="#">Newsletter</a></li>
-						</ul>
-					</div>
-					<div class="span5">
-						<p class="logo"><img src="images/logo.png" class="site_logo" alt=""></p>
-						<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. the  Lorem Ipsum has been the industry's standard dummy text ever since the you.</p>
-						<br/>
-						<span class="social_icons">
-							<a class="facebook" href="#">Facebook</a>
-							<a class="twitter" href="#">Twitter</a>
-							<a class="skype" href="#">Skype</a>
-							<a class="vimeo" href="#">Vimeo</a>
-						</span>
-					</div>					
-				</div>	
-			</section>
-			<section id="copyright">
-				<span>Copyright 2013 bootstrappage template  All right reserved.</span>
-			</section>
-		</div>
+
 <?php 
 include "php/footer.php";
 ?>

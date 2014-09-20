@@ -6,10 +6,14 @@
     $conexion = mysqli_connect($server,$user,$password,$database) or die("Error " . mysqli_error($conexion));
     mysqli_set_charset($conexion, "utf8");
 
-		$peticion = "UPDATE products SET nombre='".$_POST['nombre']."',
-precio='".$_POST['precio']."',
-existencias='".$_POST['existencias']."',
-activado ='".$_POST['activado']."'
+    if($_FILES['imagen']['type'] == "image/gif" || $_FILES['imagen']['type'] == "image/jpg" || $_FILES['imagen']['type'] == "image/jpeg" || $_FILES['imagen']['type'] == "image/png")
+    {
+      move_uploaded_file($_FILES['imagen']['tmp_name'],"../photo/brand/".$_FILES['imagen']['name']);
+    }
+
+		$peticion = "UPDATE brand SET name='".$_POST['name']."',
+descripcion='".$_POST['descripcion']."',
+imagen ='".$_FILES['imagen']['name']."'
 
 WHERE id=".$_GET['id']."
 ";
@@ -18,5 +22,5 @@ WHERE id=".$_GET['id']."
 		mysqli_close($conexion);
 ?>
 <script type="text/javascript">
-window.location="product.php";
+window.location="brand.php";
 </script>
